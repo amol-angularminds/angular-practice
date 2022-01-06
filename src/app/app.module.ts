@@ -3,20 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Bottomview1Component } from './bottomView/bottomview1/bottomview1.component';
-import { Bottomview2Component } from './bottomView/bottomview2/bottomview2.component';
-import { Bottomview3Component } from './bottomView/bottomview3/bottomview3.component';
-
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
-    Bottomview1Component,
-    Bottomview2Component,
-    Bottomview3Component
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
