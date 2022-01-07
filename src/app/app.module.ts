@@ -7,6 +7,8 @@ import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { CustomePiPipe } from './pipes/custome-pi.pipe';
 
 
 
@@ -17,6 +19,8 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     LogoutComponent,
     PageNotFoundComponent,
     ForgetPasswordComponent,
+    SignupComponent,
+    CustomePiPipe,
   ],
   imports: [
     BrowserModule,
