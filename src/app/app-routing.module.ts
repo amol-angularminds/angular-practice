@@ -1,21 +1,15 @@
-import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router'
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { AdminModule } from './modules/admin/admin.module';
-import { LandingPageModule } from './modules/landing-page/landing-page.module';
+
 const routes: Routes = [
-  {
-    path: 'welcome',
-    loadChildren: () => import('./modules/landing-page/landing-page.module').then((m) => m.LandingPageModule)
-  },
-  {
-    path: 'admin',
-    loadChildren: () => import('./modules/admin/admin.module').then((n) => n.AdminModule)
-  },
-  {
-    path:'**',
-    component:PageNotFoundComponent
-  }
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'forgotPassword', component: ForgetPasswordComponent },
+  {path:'admin',loadChildren:()=> import('./modules/admin/admin.module').then((m)=>m.AdminModule)},
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
