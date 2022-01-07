@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { CustomePiPipe } from './pipes/custome-pi.pipe';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import { CustomePiPipe } from './pipes/custome-pi.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
